@@ -18,6 +18,7 @@ const sample = array => array[Math.floor(Math.random() * array.length)];
 
 const seedDB = async () => {
     await Campground.deleteMany({});
+  /*
     const price = Math.floor(Math.random()*20) + 10;
     for (let i = 0; i < 50; i++) {
         const random1k = Math.floor(Math.random() *1000);
@@ -50,6 +51,7 @@ const seedDB = async () => {
         });
         await camp.save();
     }
+    */
 }
 
 seedDB().then(() => {
