@@ -1,16 +1,16 @@
 <% layout('layouts/boilerplate') %>
 
-<div class="w-50 mx-auto">
-<h2 class="mb-3">Login</h2>
-<form action="/login" method="POST" class="validated-form" novalidate>
-    <div class="mb-3">
-        <label class="form-label" for="username">Username</label>
-        <input class="form-control" type="text" name="username" id="username" required>
+    <div class="card mx-auto px-3 border-0" style="max-width: 40rem;">
+        <h2 class="mb-3">Login</h2>
+        <form action="/login" method="POST" class="validated-form" novalidate>
+            <div class="mb-3">
+                <label class="form-label" for="username">Username</label>
+                <input class="form-control" type="text" name="username" id="username" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="password">Password</label>
+                <input class="form-control" type="password" name="password" id="password" required>
+            </div>
+            <button class="btn btn-success">Login</button>
+        </form>
     </div>
-    <div class="mb-3">
-        <label class="form-label" for="password">Password</label>
-        <input class="form-control" type="password" name="password" id="password" required>
-    </div>
-    <button class="btn btn-success">Login</button>
-</form>
-</div>

@@ -5,48 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YelpCamp</title>
-    <link rel="stylesheet" href="/styles/bootstrapCss/bootstrap.min.css">
+    <title>CampLand</title>
+    <link rel="stylesheet" href="/styles/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/home.css">
 </head>
 
-<body>
+<body class="d-flex text-center text-white">
     <div class="bg-image" style="
-      background-image: url('https://res.cloudinary.com/dau70uw5o/image/upload/v1634400866/YelpCamp/patrick-hendry-euaPfbR6nC0-unsplash_kon8iv.jpg');
-      height: 100vh;">
-        <div class="d-flex text-center text-white">
-            <div class="cover-container d-flex w-100 h-auto p-3 mx-auto flex-column">
-                <header class="mb-auto p-2 tpt fw-bold">
-                    <div>
-                        <h3 class="float-md-start mb-0 m-1">YelpCamp</h3>
-                        <nav class="nav nav-masthead justify-content-center float-md-end">
-                            <a class="nav-link link-light" href="#">Home</a>
-                            <a class="nav-link link-light" href="/campgrounds">Campgrounds</a>
-                            <% if(!currentUser) { %>
-                                <a class="nav-link link-light" href="/login">Login</a>
-                                <a class="nav-link link-light" href="/register">Register</a>
-                                <% } else { %>
-                                    <a class="nav-link link-light" href="/logout">Logout</a>
-                                    <% } %>
-                        </nav>
-                    </div>
-                </header>
+      background-image: url('https://res.cloudinary.com/dau70uw5o/image/upload/b_rgb:000000,o_50/v1634424953/YelpCamp/peter-thomas-ATdSdo72wR8-unsplash_njluec.jpg');
+      height: 100%; width: 100%; object-fit: contain;">
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="mb-auto">
+                <div>
+                    <h3 class="float-md-start my-3 fw-light">CampLand</h3>
+                    <nav class="nav nav-masthead justify-content-center float-md-end my-3">
+                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="/campgrounds">Campgrounds</a>
+                        <% if(!currentUser) { %>
+                            <a class="nav-link" href="/login">Login</a>
+                            <a class="nav-link" href="/register">Register</a>
+                            <% } else { %>
+                                <a class="nav-link link-light" href="/logout">Logout</a>
+                                <% } %>
+                    </nav>
+                </div>
+            </header>
 
-                <main class="d-flex flex-column justify-content-center">
-                    <h1 class="mb-3">YelpCamp</h1>
-                    <p class="fs-4">Welcome to YelpCamp!</p>
-                    <p class="fs-5">Here you can find, rate and review any campground!</p>
-                    <a href="/campgrounds" class="btn btn-lg btn-secondary fw-bold text-white tpt w-25 mx-auto">
+            <main class="px-3">
+                <h1 class="fs-1 mb-3 fw-light">CampLand</h1>
+                <p class="lead fs-3 ">Welcome to CampLand!</p>
+                <p class="lead fs-4 ">Here you can find, rate and review any campground!</p>
+                <p class="lead">
+                    <a href="/campgrounds" class="btn btn-lg btn-secondary border-white bg-white">
                         View Campgrounds
                     </a>
-                </main>
-                <footer class="mt-auto text-white-50">
-                    <p>&copy; 2021 YelpCamp</p>
-                </footer>
-            </div>
+                </p>
+            </main>
+
+            <footer class="mt-auto">
+                <p>&copy; 2021 CampLand</p>
+            </footer>
+
         </div>
     </div>
-    <script src="/scripts/bootstrapJs/bootstrap.min.js"></script>
+    <script src="/scripts/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
