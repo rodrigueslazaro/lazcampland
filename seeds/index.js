@@ -18,6 +18,7 @@ const sample = array => array[Math.floor(Math.random() * array.length)];
 
 const seedDB = async () => {
     await Campground.deleteMany({});
+  /*
     const price = Math.floor(Math.random()*20) + 10;
     for (let i = 0; i < 50; i++) {
         const random1k = Math.floor(Math.random() *1000);
@@ -27,7 +28,6 @@ const seedDB = async () => {
             title: `${sample(descriptors)} ${sample(places)}`,
             image: 'https://source.unsplash.com/collection/483251',
             description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil excepturi ipsa expedita repellat quo cum quasi, aspernatur, autem natus fugit possimus architecto nisi sed corporis maiores earum suscipit eos!
-                          Quasi unde fuga accusantium qui architecto. Ea dicta eum, veniam laboriosam consequuntur quod repudiandae tempore cum consectetur perspiciatis, excepturi repellat nostrum. Totam non, iusto nobis pariatur qui omnis est sunt!
                           Quo optio debitis animi, voluptatum error voluptas id, at quidem hic, neque pariatur sunt possimus ipsum quisquam ducimus nam cum natus nulla est. Neque ut ea temporibus aliquid incidunt maxime?`,
             price,
             images: [
@@ -51,6 +51,7 @@ const seedDB = async () => {
         });
         await camp.save();
     }
+    */
 }
 
 seedDB().then(() => {

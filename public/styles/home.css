@@ -1,5 +1,9 @@
-body {
-    height: 100%;
+main {
+    height: 86vh;
+}
+
+.tpt {
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .cover-container {
