@@ -22,6 +22,9 @@ m.createCampground = async (req, res, next) => {
     const campground = new Campground(req.body.campground);
     campground.geometry = geoData.body.features[0].geometry;
     campground.images = req.files.map(f => ({ url: f.path, filename: f.filename }));
+    if(!campground.images[0]){
+        campground.images = { url: 'https://res.cloudinary.com/dau70uw5o/image/upload/v1634403411/YelpCamp/ehwsqruihejwhqeidg2g.jpg', filename: 'YelpCamp/ehwsqruihejwhqeidg2g'};
+    }
     campground.author = req.user._id;
     await campground.save();
     req.flash('success', 'Successfully made a new Campground!');
