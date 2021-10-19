@@ -21,7 +21,7 @@ const reviewRoutes = require('./routes/reviews');
 
 const mongoUrl = process.env.DB_URL;
 const MongoDBStore = require("connect-mongo")(session);
-//mongodb+srv://m001-student:m001-mongodb-basics@sandbox.ckfsk.mongodb.net/Sandbox?retryWrites=true&w=majority
+
 mongoose.connect(mongoUrl, { 
     useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
